@@ -22,6 +22,7 @@ class UserFixtures extends Fixture
             $user->setAdresse($faker->address());
             $user->setEmail($faker->email());
             $user->setPassword($faker->password());
+            $user->setRoles($faker->randomElement([['ROLE_USER'],['ROLE_ADMIN']]));
             // $formation = new Formation();
             // $formation->setTitre($faker->words(3, true));
             // $formation->setResume($faker->sentence());
