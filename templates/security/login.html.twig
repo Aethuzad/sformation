@@ -44,8 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-">
+    align-items: center;">
 
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -59,43 +58,43 @@
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
-  <!-- Email input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <label class="form-label" for="inputEmail">Email address</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus />
-  </div>
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="inputEmail">Email address</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus />
+    </div>
 
-  <!-- Password input -->
-  <div data-mdb-input-init class="form-outline mb-4">
-    <label class="form-label" for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required />
-  </div>
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required />
+    </div>
 
     <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-  <!-- Submit button -->
-  <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+    <!-- Submit button -->
+    <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 
-  <!-- Register buttons -->
-  <div class="text-center">
-    <p>Not a member? <a href="{{ path('app_register')}}">Register</a></p>
-    <p>or sign up with:</p>
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-facebook-f"></i>
-    </button>
+    <!-- Register buttons -->
+    <div class="text-center">
+        <p>Not a member? <a href="{{ path('app_register')}}">Register</a></p>
+        <p>or sign up with:</p>
+        <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-facebook-f"></i>
+        </button>
 
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-google"></i>
-    </button>
+        <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-google"></i>
+        </button>
 
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-twitter"></i>
-    </button>
+        <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-twitter"></i>
+        </button>
 
-    <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
-      <i class="fab fa-github"></i>
-    </button>
-  </div>
+        <button  data-mdb-ripple-init type="button" class="btn btn-secondary btn-floating mx-1">
+        <i class="fab fa-github"></i>
+        </button>
+    </div>
 </form>
 
 {% endblock %}
