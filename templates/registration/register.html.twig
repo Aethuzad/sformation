@@ -36,6 +36,8 @@
                 <form class="mx-1 mx-md-4" name="registration_form" method="post">
                 {{ form_errors(registrationForm) }}
 
+
+                {# Input email #}
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -44,6 +46,7 @@
                     </div>
                   </div>
 
+                {# Input password #}
                   <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
@@ -52,6 +55,7 @@
                     </div>
                   </div>
 
+                {# Input checkbox #}
                   <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox"  id="registration_form_agreeTerms" name="registration_form[agreeTerms]" required="required" value="1" />
                     <label class="form-check-label required" for="registration_form_agreeTerms">
@@ -59,6 +63,7 @@
                     </label>
                   </div>
 
+                {# Input button #}
                   <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="submit" class="btn btn-primary btn-lg">Register</button>
                   </div>
