@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\Formation;
+use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -37,7 +38,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Nos formations')
+            ->setTitle('MyFormation Admin')
             // ->disableDarkMode()
             // ->renderContentMaximized()
             // ->renderSidebarMinimized()
@@ -55,8 +56,11 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToDashboard('Dashboard', 'fa-solid fa-table-columns'),
             MenuItem::linkToRoute('Retour à l\'accueil', 'fa fa-home', 'homepage'),
 
-            MenuItem::section('Nos formations'),
+            MenuItem::section('Formations'),
             MenuItem::linkToCrud('Formations', 'fas fa-list', Formation::class),
+
+            MenuItem::section('Utilisateurs'),
+            MenuItem::linkToCrud('Utilisateurs', 'fas fa-users', User::class),
         ];
     }
 }
