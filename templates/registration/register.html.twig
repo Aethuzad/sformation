@@ -1,13 +1,19 @@
-{# {% extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<section class='w-50 mx-auto'>
+    <h1 class='text-center mt-5'>Register</h1>
 
     {{ form_errors(registrationForm) }}
 
     {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.nom) }}
+        {{ form_row(registrationForm.prenom) }}
+        {{ form_row(registrationForm.age) }}
+        {{ form_row(registrationForm.telephone) }}
+        {{ form_row(registrationForm.adresse) }}
         {{ form_row(registrationForm.email) }}
         {{ form_row(registrationForm.plainPassword, {
             label: 'Password'
@@ -16,9 +22,10 @@
 
         <button type="submit" class="btn btn-primary">Register</button>
     {{ form_end(registrationForm) }}
-{% endblock %} #}
+    </section>
+{% endblock %}
 
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
 
@@ -37,34 +44,76 @@
                 {{ form_errors(registrationForm) }}
 
 
+                {# {{ form_row(registrationForm.nom)}} #}
+                {# Input name #}
+                  {# <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="registration_form_nom" name="registration_form[nom]" required="required" class="form-control" maxlength="180" />
+                      <label class="required" for="registration_form_nom">Your name</label>
+                    </div>
+                  </div>
+                {# {{ form_row(registrationForm.prenom)}} #}
+                    {# <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="registration_form_prenom" name="registration_form[prenom]" required="required" class="form-control" maxlength="180" />
+                      <label class="required" for="registration_form_prenom">Your lastname</label>
+                    </div>
+                  </div> #}
+                {# {{ form_row(registrationForm.age)}} #}
+                    {# <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="registration_form_age" name="registration_form[age]" required="required" class="form-control" maxlength="180" />
+                      <label class="required" for="registration_form_age">Your age</label>
+                    </div>
+                  </div> #}
+                {# {{ form_row(registrationForm.telephone)}} #}
+                    {# <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="registration_form_telephone" name="registration_form[telephone]" required="required" class="form-control" maxlength="180" />
+                      <label class="required" for="registration_form_telephone">Your number</label>
+                    </div>
+                  </div> #}
+                {# {{ form_row(registrationForm.adresse)}} #}
+                    {# <div class="d-flex flex-row align-items-center mb-4">
+                    <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                    <div class="form-outline flex-fill mb-0">
+                      <input type="text" id="registration_form_adresse" name="registration_form[adresse]" required="required" class="form-control" maxlength="180" />
+                      <label class="required" for="registration_form_adresse">Your adress</label>
+                    </div>
+                  </div> #}
+
                 {# Input email #}
-                  <div class="d-flex flex-row align-items-center mb-4">
+                  {# <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" id="registration_form_email" name="registration_form[email]" required="required" class="form-control" maxlength="180" />
                       <label class="required" for="registration_form_email">Your Email</label>
                     </div>
-                  </div>
+                  </div> #}
 
                 {# Input password #}
-                  <div class="d-flex flex-row align-items-center mb-4">
+                  {# <div class="d-flex flex-row align-items-center mb-4">
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" id="registration_form_plainPassword" name="registration_form[plainPassword]" class="form-control" required="required" autocomplete="new-password"/>
                       <label  for="registration_form_plainPassword" class="required form-label">Password</label>
                     </div>
-                  </div>
+                  </div> #}
 
                 {# Input checkbox #}
-                  <div class="form-check d-flex justify-content-center mb-5">
+                  {# <div class="form-check d-flex justify-content-center mb-5">
                     <input class="form-check-input me-2" type="checkbox"  id="registration_form_agreeTerms" name="registration_form[agreeTerms]" required="required" value="1" />
                     <label class="form-check-label required" for="registration_form_agreeTerms">
                       I agree all statements in <a href="#!">Terms of service</a>
                     </label>
-                  </div>
+                  </div> #}
 
                 {# Input button #}
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                  {# <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                     <button type="submit" class="btn btn-primary btn-lg">Register</button>
                   </div>
                 
@@ -85,5 +134,5 @@
       </div>
     </div>
   </div>
-</section>
-{% endblock %}
+</section> #}
+{# {% endblock %} #}
