@@ -18,7 +18,7 @@ class UserFixtures extends Fixture
             $user->setNom($faker->lastName());
             $user->setPrenom($faker->firstName());
             $user->setAge($faker->numberBetween(18, 60));
-            $user->setTelephone($faker->e164PhoneNumber());
+            $user->setTelephone($faker->randomElement(['0685457578','0673457541','0690457596','0630457520','0667457543','0688557567','0683457539']));
             $user->setAdresse($faker->address());
             $user->setEmail($faker->email());
             $user->setPassword($faker->password());
