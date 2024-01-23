@@ -18,6 +18,7 @@ class HomeController extends AbstractController
         Request $request): Response
     {
         $formations = $paginator->paginate(
+            // NOTE - Le [] derrière le findBy signifie qu'il s'agit d'un SELECT *
             $formationRepository->findBy([], ['id' => 'DESC']),
             $request->query->getInt('page', 1),
             10
