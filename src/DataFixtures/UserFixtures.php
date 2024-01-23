@@ -30,9 +30,9 @@ class UserFixtures extends Fixture
             // $formation->setDuree($faker->numberBetween(0, 365));
             // $formation->setNiveau($faker->randomElement(['débutant', 'intermediare', 'expert']));
             // $formation->setLieu($faker->randomElement(['presentiel', 'distanciel']));
-            $manager->persist($user);
+            // $manager->persist($user);
         endfor;
 
-        $manager->flush();
+        // $manager->flush();
     }
 }
